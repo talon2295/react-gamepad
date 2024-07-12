@@ -178,6 +178,10 @@ export interface Props {
 
 export const layouts: { XBOX: Layout };
 
+export function useVibration(gamepadIndex: number): {
+	vibrate: (intensity: number, duration?: number) => void;
+};
+
 declare class Gamepad extends React.Component<Props> {
     static layouts: typeof layouts;
 }
