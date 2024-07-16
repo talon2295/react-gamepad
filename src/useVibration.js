@@ -1,5 +1,6 @@
-function useVibration(gamepadIndex) {
+function useVibration(_gamepadIndex) {
 	const vibrationEffect = "dual-rumble";
+    const gamepadIndex = (!_gamepadIndex || _gamepadIndex < 0) ? 0 : _gamepadIndex ;
 
 	const vibrate = (intensity, duration = 300) => {
 		const gamepad = navigator.getGamepads()[gamepadIndex];
